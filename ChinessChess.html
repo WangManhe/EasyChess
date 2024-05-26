@@ -179,12 +179,82 @@
                 localStorage.setItem(ele,pos);
             }
             var currentChosen,currentSide;
+            /*
+             * 移动逻辑:
+             * 车:
+             * 1. 行相同或列相同
+             * 2. 途中不能有其他棋子拦住
+             * 3. 目标点不是友军
+             * 马:
+             * 1. 在日字的对面
+             * 2. 没有蹩马腿
+             * 3. 目标点不是友军
+             * 炮:
+             * 1. 行相同或列相同
+             * 2. 途中没有棋子间隔或有炮架且目标点不是友军
+             * 相:
+             * 1. 在日字的对面
+             * 2. 没有过河
+             * 3. 没有塞相眼
+             * 4. 目标点不是友军
+             * 士:
+             * 1. 斜着走一格
+             * 2. 没有出宫
+             * 3. 目标点不是友军
+             * 将:
+             * 1. 相邻一格或击杀对面的王
+             * 2. 杀王时不能有其他棋子间隔
+             * 3. 目标点不是友军
+             * 兵:
+             * 1. 前进一格或平移一格
+             * 2. 没过河不能平移
+             */
             function reach(ele,pos){
                 if(ele[0]=='R'){
-                    
+                    if(ele[3]=='R'){
+
+                    }
+                    else if(ele[3]=='K'&&ele.length==4){
+
+                    }
+                    else if(ele[3]=='K'){
+
+                    }
+                    else if(ele[3]=='C'){
+
+                    }
+                    else if(ele[3]=='P'){
+
+                    }
+                    else if(ele[3]=='B'){
+
+                    }
+                    else if(ele[3]=='S'){
+
+                    }
                 }
                 else{
+                    if(ele[5]=='R'){
 
+                    }
+                    else if(ele[5]=='K'&&ele.length==6){
+
+                    }
+                    else if(ele[5]=='K'){
+
+                    }
+                    else if(ele[5]=='C'){
+
+                    }
+                    else if(ele[5]=='P'){
+
+                    }
+                    else if(ele[5]=='B'){
+
+                    }
+                    else if(ele[5]=='S'){
+                        
+                    }
                 }
             }
             function ASDASDEOGIRTH(str){
